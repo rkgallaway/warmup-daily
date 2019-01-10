@@ -1,36 +1,41 @@
 'use strict';
 
-const theArr = [];
-for (let i = 0; i < 10; i++){
-  theArr.push(i * i * i);
+const arr = [];
+for (let i = 0; i <= 10; i++){
+  arr.push(i);
 }
-console.log(theArr);
+
+console.log({arr});
 
 function forLoop(arr){
-  for(let i = 0; i < arr.length; i++){
+  for (let i in arr){
+  
     console.log(arr[i]);
   }
 }
 
-forLoop(theArr);
+forLoop(arr);
 
 function whileLoop(arr){
-  let count = o;
+  let count = 0;
   while(count < arr.length){
     console.log(arr[count]);
     count++;
   }
 }
-whileLoop(theArr);
+
+whileLoop(arr);
 
 function myMapper(arr, cb){
-  const result = [];
-  for(let i = 0; i < arr.length; i++){
-    result.push(cb(arr[i]));
+  const results = [];
+  for(let i in arr){
+    results.push(cb(arr[i]));
   }
-  return result;
+  return results;
 }
 
-console.log(myMapper(theArr, (value) => {
-  return Math.floor(value / 3 / 3);
+console.log(myMapper(arr, (value) => {
+  return Math.floor(value);
 }));
+
+//didn't get much further but doing things differently, more on my own, getting more expected results!
