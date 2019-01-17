@@ -95,7 +95,7 @@ let newState = {
 };
 
 // console.log(newPeople);
-// console.log(newStuff); 
+console.log(newStuff); 
 
 // console.log(newState);
 // console.log(stuff);
